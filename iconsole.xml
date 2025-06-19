@@ -1,0 +1,19 @@
+<service>
+    <id>Iconsole</id>
+    <name>Effiya Iconsole</name>
+    <description>Effiya Iconsole Service at port 8074</description>
+    <executable>C:\effiya\java\jdk1.8.0_333\bin\java.exe</executable>
+	<startargument>-Xmx256m</startargument>
+	<startargument>-Dspring.application.admin.enabled=true</startargument>
+	<startargument>-Dcom.sun.management.jmxremote.port=50218</startargument>
+	<startargument>-Dcom.sun.management.jmxremote.authenticate=false</startargument>
+	<startargument>-Dcom.sun.management.jmxremote.ssl=false</startargument>
+	<startargument>-Dthin.root=../app</startargument>
+	<startargument>-jar</startargument>
+    <arguments>../app/iconsole.jar --spring.config.location=file:../conf/application.properties</arguments>
+    <logmode>rotate</logmode>
+	<stopexecutable>C:\effiya\jdk1.8.0_333\bin\java.exe</stopexecutable>s
+	<stopargument>-jar</stopargument>
+	<stopargument>SpringBootStopper.jar</stopargument>
+	<stopargument>50218</stopargument>
+</service>

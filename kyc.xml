@@ -1,0 +1,19 @@
+<service>
+    <id>Kyc</id>
+    <name>Effiya Kyc</name>
+    <description>Effiya Kyc Service at port 8018</description>
+    <executable>C:\effiya\java\jdk1.8.0_333\bin\java.exe</executable>
+	<startargument>-Xmx256m</startargument>
+	<startargument>-Dspring.application.admin.enabled=true</startargument>
+	<startargument>-Dcom.sun.management.jmxremote.port=50215</startargument>
+	<startargument>-Dcom.sun.management.jmxremote.authenticate=false</startargument>
+	<startargument>-Dcom.sun.management.jmxremote.ssl=false</startargument>
+	<startargument>-Dthin.root=../app</startargument>
+	<startargument>-jar</startargument>
+    <arguments>../app/kyc.jar --spring.config.location=file:../conf/application.properties</arguments>
+    <logmode>rotate</logmode>
+	<stopexecutable>C:\effiya\jdk1.8.0_333\bin\java.exe</stopexecutable>s
+	<stopargument>-jar</stopargument>
+	<stopargument>SpringBootStopper.jar</stopargument>
+	<stopargument>50215</stopargument>
+</service>
