@@ -1,0 +1,16 @@
+<service>
+  <id>effiya_webserver</id>
+  <name>Effiya Webserver nginx</name>
+  <description>Effiya Nginx websever at port 80</description>
+  <executable>C:\effiya\root\web\webserver\nginx-1.16.1\nginx.exe</executable>
+  <logpath>C:\effiya\root\web\webserver\logs</logpath>
+  <logmode>roll</logmode>
+  <depend></depend>
+  <startargument>-p</startargument>
+  <startargument>C:\effiya\root\web\webserver\nginx-1.16.1</startargument>
+  <stopargument>-p</stopargument>
+  <stopargument>C:\effiya\root\web\webserver\nginx-1.16.1</stopargument>
+  <stopargument>-s</stopargument>
+  <stopargument>stop</stopargument>
+
+</service>
